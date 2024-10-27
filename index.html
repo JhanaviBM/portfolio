@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+    <img src="image.jpg" alt="Jhanavi BM" class="profile-pic">
+    <h1>Jhanavi BM</h1>
+    </div>
+    <p>Student | Aspiring Software Engineer | Developer</p>
+</header>
+
+<main>
+    <fieldset class="section">
+        <legend>About Me</legend>
+        <p>Hi there, I'm a passionate final-year Computer Science Engineering student at 
+        Sri Venkateshwara College of Engineering, Bangalore.</p>
+        <p>I'm passionate about building scalable, effective solutions to real-world problems.
+            I'm always looking for new opportunities to learn and grow.
+        </p>
+    </fieldset>
+
+    <fieldset class="section">
+        <legend>Education</legend>
+        <ul id="education-list"></ul>
+    </fieldset>
+
+    <fieldset class="section">
+        <legend>Skills</legend>
+        <div class="skills-tabs">
+            <button class="skills-tab active" onclick="showSkills('programming')">Programming Languages</button>
+            <button class="skills-tab" onclick="showSkills('frameworks')">Frameworks and Tools</button>
+            <button class="skills-tab" onclick="showSkills('core-concepts')">Core Concepts</button>
+            <button class="skills-tab" onclick="showSkills('other-skills')">Other Skills</button>
+        </div>
+        <div id="programming" class="skills-content active">
+            <ul>
+                <li>Java</li>
+                <hr>
+                <li>Python</li>
+                <hr>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div id="frameworks" class="skills-content">
+            <ul>
+                <li>Django</li>
+                <hr>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div id="core-concepts" class="skills-content">
+            <ul>
+                <li>Data Structures and Algorithms</li>
+                <hr>
+                <li>Database Management</li>
+                <hr>
+                <li>OOPs</li>
+            </ul>
+        </div>
+        <div id="other-skills" class="skills-content">
+            <ul>
+                <li>Communication</li>
+                <hr>
+                <li>Problem Solving</li>
+                <hr>
+                <li>Debugging</li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset class="section">
+        <legend>Projects</legend>
+        <ul id="project-list"></ul>
+    </fieldset>
+
+    <fieldset class="section">
+        <legend>Activities & Achievements</legend>
+        <ul id="activities-list"></ul>
+    </fieldset>
+
+    <fieldset class="section">
+        <legend>Socials</legend>
+        <div class="socials-container">
+            <a href="mailto:jhanavigowda03@gmail.com">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/email.png" alt="Email" class="socials-icons"/> 
+            </a>
+            <a href="https://www.linkedin.com/in/jhanavi-b-m-0904b4253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/linkedin.png" alt="LinkedIn" class="socials-icons"/> 
+            </a>
+            <a href="https://github.com/JhanaviBM" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/github.png" alt="GitHub" class="socials-icons"/> 
+            </a>
+        </div>
+    </fieldset>
+</main>
+
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; Hope you have a good day.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
