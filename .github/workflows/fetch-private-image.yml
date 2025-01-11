@@ -1,0 +1,25 @@
+name: Fetch Private Image
+
+on: 
+  push:
+    branches:
+      - main  # Or your branch
+
+jobs:
+  fetch_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Download Profile Picture
+        run: |
+          curl -H "Authorization: token ${{ secrets.ACCESS_TOKEN }}" \
+          -o static/images/profile.jpg \
+          https://raw.githubusercontent.com/<your-username>/<private-repo>/<branch>/path/to/profile.jpg
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./static
